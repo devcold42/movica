@@ -1,13 +1,13 @@
 [versions]
 # base
 agp = "8.7.2"
-kotlin = "2.0.0"
+kotlin = "2.0.21"
 coreKtx = "1.15.0"
 lifecycleRuntimeKtx = "2.8.7"
 
 # compose
-activityCompose = "1.8.0"
-composeBom = "2024.04.01"
+activityCompose = "1.9.3"
+composeBom = "2024.11.00"
 
 # tests
 junit = "4.13.2"
