@@ -1,4 +1,4 @@
-package `in`.devcold.movica
+package `in`.devcold.movica.ui.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
