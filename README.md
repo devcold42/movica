@@ -1,4 +1,4 @@
-# Movica 🎥
+# Movica 🎥 | (Work In Progress)
 
 Movica is a native Android app showcasing modern development practices and clean architecture. Powered by the [TMDB API](https://developer.themoviedb.org/reference/intro/getting-started), it is designed as a demonstration of scalable and maintainable Android development.
 
