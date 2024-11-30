@@ -20,3 +20,5 @@ Movica is a native Android app showcasing modern development practices and clean
 - Clean Architecture: UDF, Modularization, Dependency Injection (Hilt)
 - REST API: Retrofit
 - Tests: JUnit, Espresso
+
+Email: admin [at] devcold [dot] in 
