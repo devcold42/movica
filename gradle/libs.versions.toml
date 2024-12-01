@@ -14,6 +14,9 @@ gms = "4.4.2"
 firebaseBom = "33.6.0"
 firebaseCrashlyticsPlugin = "3.0.2"
 
+# logging
+timber = "5.0.1"
+
 # tests
 junit = "4.13.2"
 junitAndroid = "1.2.1"
@@ -38,6 +41,9 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 # firebase
 google-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 google-firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+
+# logging
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 
 # tests
 junit = { group = "junit", name = "junit", version.ref = "junit" }
