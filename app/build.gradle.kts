@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.hilt.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.services)
     alias(libs.plugins.firebase.crashlytics)
@@ -39,6 +41,12 @@ android {
     }
 }
 
+// Allow references to generated code
+// TODO: replace kapt with KSP once Hilt support is ready
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
     // base
     implementation(libs.androidx.core.ktx)
@@ -58,6 +66,11 @@ dependencies {
 
     // logging
     implementation(libs.timber)
+
+    // di
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    implementation(libs.hilt.navigation.compose)
 
     // tests
     testImplementation(libs.junit)
