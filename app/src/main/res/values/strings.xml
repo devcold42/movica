@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Movica</string>
+    <string name="network_generic_exception_message">Network error. Please check your internet connection.</string>
 </resources>

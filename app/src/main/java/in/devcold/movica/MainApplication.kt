@@ -2,6 +2,7 @@ package `in`.devcold.movica
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
+import `in`.devcold.movica.utils.NetworkUtils
 import `in`.devcold.movica.utils.TimberDebugTree
 import `in`.devcold.movica.utils.TimberReleaseTree
 import timber.log.Timber
@@ -14,5 +15,7 @@ class MainApplication : Application() {
 
         val tree = if (BuildConfig.DEBUG) TimberDebugTree() else TimberReleaseTree()
         Timber.plant(tree)
+
+        NetworkUtils.init(applicationContext)
     }
 }
