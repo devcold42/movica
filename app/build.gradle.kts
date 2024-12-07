@@ -50,6 +50,7 @@ kapt {
 
 dependencies {
     // base
+    implementation(libs.kotlin.reflect)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
