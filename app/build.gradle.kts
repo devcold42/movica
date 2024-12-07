@@ -73,6 +73,13 @@ dependencies {
     kapt(libs.hilt.android.compiler)
     implementation(libs.hilt.navigation.compose)
 
+    // network
+    implementation(libs.squareup.retrofit)
+    implementation(libs.squareup.converter.gson)
+    implementation(libs.squareup.converter.scalars)
+    // this is required for access to internal classes
+    implementation(libs.squareup.okhttp)
+
     // tests
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -22,6 +22,10 @@ timber = "5.0.1"
 hilt = "2.52"
 hiltNavigationCompose = "1.2.0"
 
+# network
+retrofit = "2.9.0"
+okhttp = "4.12.0"
+
 # tests
 junit = "4.13.2"
 junitAndroid = "1.2.1"
@@ -54,6 +58,12 @@ timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "tim
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+# network
+squareup-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+squareup-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+squareup-converter-scalars = { group = "com.squareup.retrofit2", name = "converter-scalars", version.ref = "retrofit" }
+squareup-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 
 # tests
 junit = { group = "junit", name = "junit", version.ref = "junit" }
