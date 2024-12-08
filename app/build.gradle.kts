@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.google.ksp)
     alias(libs.plugins.google.services)
     alias(libs.plugins.firebase.crashlytics)
+    alias(libs.plugins.androidx.room)
 }
 
 android {
@@ -40,12 +41,21 @@ android {
         compose = true
         buildConfig = true
     }
-}
 
-// Allow references to generated code
-// TODO: replace kapt with KSP once Hilt support is ready
-kapt {
-    correctErrorTypes = true
+    // TODO: migrate to KSP completely once Hilt support is ready
+    // Allow references to generated code
+    kapt {
+        correctErrorTypes = true
+    }
+
+    ksp {
+        arg("room.generateKotlin", "true")
+        arg("room.incremental", "true")
+    }
+
+    room {
+        schemaDirectory("$projectDir/schemas")
+    }
 }
 
 dependencies {
@@ -80,6 +90,11 @@ dependencies {
     implementation(libs.squareup.converter.scalars)
     // this is required for access to internal classes
     implementation(libs.squareup.okhttp)
+
+    // db
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 
     // tests
     testImplementation(libs.junit)
