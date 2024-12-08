@@ -30,6 +30,16 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
+
+    // Fail build on lint warnings/errors to fix issues early
+    applicationVariants.configureEach {
+        val lintTask = tasks.named("lint${name.replaceFirstChar { it.uppercaseChar() }}")
+
+        // Add list of all the tasks which should fail the build, like "detekt", etc.
+        assembleProvider.get().dependsOn(lintTask)
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
